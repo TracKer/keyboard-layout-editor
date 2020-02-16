@@ -805,8 +805,8 @@
 		function validate(key,prop,value) {
 			var v = {
 				_ : function() { return value; },
-				x : function() { return Math.max(0, Math.min(36, value)); },
-				y : function() { return Math.max(0, Math.min(36, value)); },
+				x : function() { return Math.max(-36, Math.min(36, value)); },
+				y : function() { return Math.max(-36, Math.min(36, value)); },
 				x2 : function() { return Math.max(-Math.abs(key.width-key.width2), Math.min(Math.abs(key.width-key.width2), value)); },
 				y2 : function() { return Math.max(-Math.abs(key.height-key.height2), Math.min(Math.abs(key.height-key.height2), value)); },
 				width : function() { return Math.max(0.5, Math.min(24, value)); },
